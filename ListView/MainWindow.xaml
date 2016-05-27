@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <StackPanel>
+            <Label Content="WPF ListView test"
+           Margin="5"
+           Background="LightCoral"/>
+            <ListView ItemsSource="{Binding Guys}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Guy"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Age}" Header="Age"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
     </Grid>
 </Window>
