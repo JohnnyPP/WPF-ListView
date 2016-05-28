@@ -20,27 +20,16 @@ namespace ListView
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, INotifyPropertyChanged
+    public partial class MainWindow : Window
     {
-        public List<Person> Guys { get; set; }
+        ViewModel vm;
 
         public MainWindow()
         {
             InitializeComponent();
+            vm = new ViewModel();
 
-            this.DataContext = this;
-
-            Guys = new List<Person>();
-            Guys.Add(new Person("Julius Caesar", 40));
-            Guys.Add(new Person("Pompeius Magnus", 46));
-            Guys.Add(new Person("Marcus Crassus", 55));
-            RaisePropertyChanged("Guys");
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void RaisePropertyChanged(string propName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
+            DataContext = vm;
         }
     }
 }
