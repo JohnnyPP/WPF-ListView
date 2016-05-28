@@ -98,6 +98,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ReaderAssembly\ReaderAssembly.csproj">
+      <Project>{c68d750b-d4bf-4351-b2e5-da67700e47e6}</Project>
+      <Name>ReaderAssembly</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Reader\Reader.csproj">
       <Project>{db8ca357-0d9d-44d5-874f-866ef340dd89}</Project>
       <Name>Reader</Name>
